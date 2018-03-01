@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+#include "math.h"
+#include "conio.h"
+using namespace std;
+
+int main() 
+{
+	int j, g, a, n;
+	cin>>j;
+	a=j;
+	while(a>0)
+	{
+		g=a%10;
+		if (g>=8) cout<<"El numero "<<g<<" No esta en base 8"<<"\n";
+		a=a/10;
+	}
+	return 0;
+	getch();
+}
