@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int k,g=0,j=0;
+    cout<<"Ingrese un numero"<<endl;
+    cin>>k;
+    while(k>0)
+    {
+        g=k%10;
+        j=(g+j)*10;
+        k=k/10;
+    }
+    cout<<"El numero invertido es: "<<endl;
+    cout<<j/10<<endl;
+    system("pause");
+    return 0;
+}
