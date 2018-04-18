@@ -1,0 +1,91 @@
+
+
+                                               //fibonacci.cpp
+
+
+// fibonacci.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "fibonaccix.h"
+#include "iostream"
+#include "conio.h"
+
+using namespace std;
+#define max 100
+void main(){
+int n;
+int vec[max];
+
+fibonaccix serie1;
+ cout<<"ingrese tamaño"<<endl;
+ cin>>n;
+
+
+ serie1.serie(vec,n);
+ getch();
+}
+
+
+                                          //fibonaccix.h
+
+#pragma once
+class fibonaccix
+{
+ private:
+				int vec[100];
+				int n;
+ public:
+	fibonaccix(void);
+	~fibonaccix(void);
+	void serie(int vec[],int n);
+
+
+};
+
+
+
+                                       //fibonaccix.cpp
+
+
+#include "StdAfx.h"
+#include "fibonaccix.h"
+#include "iostream"
+#include "conio.h"
+
+using namespace std;
+
+fibonaccix::fibonaccix(void)
+{
+}
+
+
+fibonaccix::~fibonaccix(void)
+{
+}
+
+
+void fibonaccix::serie(int vec[],int n)
+
+{
+	int i;   int h=0; int s=1;
+	vec[0]=0;
+	vec[1]=1;
+	cout<<vec[0];
+	cout<<vec[1];
+
+	for(i=2;i<n;i++)
+	{
+	
+
+		vec[0]=0;
+		vec[1]=1;
+
+	vec[i]=vec[i-2]+vec[i-1];
+	
+	cout<<vec[i];
+
+	}
+
+	getch();
+}
